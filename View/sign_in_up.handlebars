@@ -11,6 +11,11 @@
             <h3>Email:</h3>
             <input type="email" placeholder="your_name@example.com">
             <br>
+            {{#unless logging_in}}
+            <h3>Username</h3>
+            <input type="username">
+            <br>
+            {{/unless}}
             <h3>Password:</h3>
             <input type="password" placeholder="Password">
             {{#if logging_in}}
