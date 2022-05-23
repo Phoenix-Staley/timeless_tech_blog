@@ -1,0 +1,27 @@
+[
+    {
+        "username": "Luca Paguro",
+        "email": "luca123@outlook.com",
+        "password": "password12345"
+    },
+    {
+        "username": "Alberto Scorfano",
+        "email": "alberto321@hotmail.com",
+        "password": "password12345"
+    },
+    {
+        "username": "Giulia Marcovaldo",
+        "email": "luca123@outlook.com",
+        "password": "password12345"
+    },
+    {
+        "username": "Ugo Paguro",
+        "email": "ugo_paguro@gmail.com",
+        "password": "password12345"
+    },
+    {
+        "username": "Massimo Marcovaldo",
+        "email": "il_massimo_uomo@hotmail.com",
+        "password": "password12345"
+    }
+]
