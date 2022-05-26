@@ -1,0 +1,30 @@
+<div class="card log_in_out">
+    <div class="card-header">
+        {{#if logging_in}}
+        <h2>Log In</h2>
+        {{else}}
+        <h2>Sign Up</h2>
+        {{/if}}
+    </div>
+    <div class="card-body">
+        <form>
+            <h3>Email:</h3>
+            <input type="email" placeholder="your_name@example.com">
+            <br>
+            {{#unless logging_in}}
+            <h3>Username</h3>
+            <input type="username">
+            <br>
+            {{/unless}}
+            <h3>Password:</h3>
+            <input type="password" placeholder="Password">
+            {{#if logging_in}}
+            <button onclick="log_in">Log In</button>
+            <a href="/sign_up">Sign up instead</a>
+            {{else}}
+            <button onclick="log_in">Sign Up</button>
+            <a href="/login">Log in instead</a>
+            {{/if}}
+        </form>
+    </div>
+</div>
