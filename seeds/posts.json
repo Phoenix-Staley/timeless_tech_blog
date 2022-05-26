@@ -1,5 +1,17 @@
-{
-    "title": "",
-    "body": "",
-    "user_id": "1"
-}
+[
+    {
+        "title": "Object Relational Mapping is the future!",
+        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "user_name": "Luca Paguro"
+    },
+    {
+        "title": "Will Smart Phones Become Obsolete?",
+        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "user_name": "Massimo Marcovaldo"
+    },
+    {
+        "title": "Python is the Best Programming Language! Change My Mind.",
+        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "user_name": "Luca Paguro"
+    }
+]
