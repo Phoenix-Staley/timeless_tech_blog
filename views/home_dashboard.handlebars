@@ -1,10 +1,22 @@
-{{#each posts as |post|}}
-<div class="card post">
-    <div class="card-header">
-        <h2>{{post.title}}</h2>
+<div class="container is-half">
+    {{#each posts as |post|}}
+    <div class="card mb-3">
+        <header class="card-header has-background-black">
+            <p class="card-header-title has-text-link-light">
+                {{post.title}}
+            </p>
+            <p class="has-text-link-light pr-3 pt-3">
+                From: {{post.user.user_name}}
+            </p>
+        </header>
+        <div class="card-content has-background-dark has-text-light">
+            <div class="content">
+                {{post.body}}
+            </div>
+            <button class="button has-text-link-light has-background-black">
+                <a href="/api/post/{{post.id}}">View Comments</a>
+            </button>
+        </div>
     </div>
-    <div class="card-body">
-        <p>{{post.body}}</p>
-    </div>
+    {{/each}}
 </div>
-{{/each}}

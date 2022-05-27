@@ -2,24 +2,32 @@
     <head>
         <meta charset="UTF-8" lang="en">
         <title>Timeless Tech Blog</title>
-        <link rel="stylesheet" href="../../Public/CSS/style.css">
+        <link rel="stylesheet" href="/css/reset.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <link rel="stylesheet" href="/css/style.css">
     </head>
-    <body>
-        <header>
-            <div id="left-header">
-                <h1>Timeless Tech Blog</h1>
+    <body class="has-background-grey is-fullheight">
+        <nav class="navbar is-fixed-top is-flex is-justify-content-space-between pt-3 px-3 has-background-info has-text-black has-text-weight-bold">
+            <div id="left-header navbar-brand">
+                <h1 class="has-text-weight-bold">Timeless Tech Blog</h1>
             </div>
             <div id="right-header">
-                <a href="/">Home</a>
-                <a href="/dashboard/">Dashboard</a>
+                <a href="/" class="px-3">Home</a>
+                <a href="/dashboard/" class="px-3">Dashboard</a>
                 {{#if logged_in}}
-                <a>Log Out</a>
+                <a class="px-3">Log Out</a>
                 {{else}}
-                <a>Log In</a>
+                <a href="google.com" class="px-3">Log In</a>
                 {{/if}}
             </div>
-        </header>
+        </nav>
         {{{body}}}
+        <footer class="footer is-flex is-justify-content-center py-4 has-background-grey-dark has-text-light">
+            <div class="is-flex is-flex-direction-column is-align-content-center has-text-centered">
+                <h1 class="has-text-weight-bold">Timeless Tech Blog</h1>
+                <p>© 2022</p>
+            </div>
+        </footer>
     </body>
     <script src="../../Public/JS/index.js"></script>
 </html>
