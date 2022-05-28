@@ -1,0 +1,32 @@
+[
+    {
+        "body": "Minim id velit voluptate eiusmod ea veniam pariatur deserunt consequat irure nulla laborum fugiat consectetur.",
+        "post_id": 1,
+        "commenter_id": 2
+    },
+    {
+        "body": "Minim id velit voluptate eiusmod ea veniam pariatur deserunt consequat irure nulla laborum fugiat consectetur.",
+        "post_id": 2,
+        "commenter_id": 2
+    },
+    {
+        "body": "Minim id velit voluptate eiusmod ea veniam pariatur deserunt consequat irure nulla laborum fugiat consectetur.",
+        "post_id": 3,
+        "commenter_id": 2
+    },
+    {
+        "body": "Minim id velit voluptate eiusmod ea veniam pariatur deserunt consequat irure nulla laborum fugiat consectetur.",
+        "post_id": 2,
+        "commenter_id": 2
+    },
+    {
+        "body": "Minim id velit voluptate eiusmod ea veniam pariatur deserunt consequat irure nulla laborum fugiat consectetur.",
+        "post_id": 5,
+        "commenter_id": 2
+    },
+    {
+        "body": "Minim id velit voluptate eiusmod ea veniam pariatur deserunt consequat irure nulla laborum fugiat consectetur.",
+        "post_id": 1,
+        "commenter_id": 2
+    }
+]

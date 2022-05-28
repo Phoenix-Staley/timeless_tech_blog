@@ -1,5 +1,5 @@
-<div class="container is-half">
-    <div class="card mb-3">
+<div class="container is-half is-transparent">
+    <div class="card mb-3 is-transparent">
         <header class="card-header has-background-black">
             <p class="card-header-title has-text-link-light">
                 {{post.title}}
@@ -12,6 +12,14 @@
             <div class="content">
                 {{post.body}}
             </div>
+        </div>
+        <h3 class="mt-5 mx-2 mb-1 box box-padding py-1 has-text-light has-background-link has-text-centered">Comments: </h3>
+        <div class="py-2 is-transparent">
+            {{#if post.comments}}
+                {{> comments}}
+            {{else}}
+            <p class="mt-5 mx-2 mb-1 box box-padding p-5 has-text-light has-background-link-dark has-text-centered">No comments yet</p>
+            {{/if}}
         </div>
     </div>
 </div>

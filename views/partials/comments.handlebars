@@ -1,0 +1,14 @@
+{{#each post.comments as |comment|}}
+<div class="card mx-3 my-1">
+    <header class="card-header has-background-black">
+        <p class="has-text-info p-1">
+            From: {{comment.user.user_name}}
+        </p>
+    </header>
+    <div class="card-content has-background-dark has-text-light p-3">
+        <div class="content">
+            {{comment.body}}
+        </div>
+    </div>
+</div>
+{{/each}}
