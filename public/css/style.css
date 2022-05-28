@@ -1,5 +1,6 @@
 body {
     padding-top: 5%;
+    padding-bottom: 5%;
     margin-bottom: 0;
 }
 
@@ -10,4 +11,13 @@ a {
 
 a:hover {
     color: white;
+}
+
+.is-transparent {
+    background: rgba(0%, 0%, 100%, 0);
+}
+
+.logo:hover {
+    text-decoration: underline;
+    color: black;
 }
