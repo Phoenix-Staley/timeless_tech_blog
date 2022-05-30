@@ -1,26 +1,26 @@
 [
     {
-        "user_name": "Luca Paguro",
+        "username": "Luca Paguro",
         "email": "luca123@outlook.com",
         "password": "password12345"
     },
     {
-        "user_name": "Alberto Scorfano",
+        "username": "Alberto Scorfano",
         "email": "alberto321@hotmail.com",
         "password": "password12345"
     },
     {
-        "user_name": "Giulia Marcovaldo",
+        "username": "Giulia Marcovaldo",
         "email": "luca123@outlook.com",
         "password": "password12345"
     },
     {
-        "user_name": "Ugo Paguro",
+        "username": "Ugo Paguro",
         "email": "ugo_paguro@gmail.com",
         "password": "password12345"
     },
     {
-        "user_name": "Massimo Marcovaldo",
+        "username": "Massimo Marcovaldo",
         "email": "il_massimo_uomo@hotmail.com",
         "password": "password12345"
     }
