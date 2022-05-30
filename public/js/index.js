@@ -7,6 +7,15 @@ if (post) {
     post_id = post.getAttribute("data-id");
 }
 
+const get_post_values = () => {
+    const title_el = document.getElementById("title");
+    const body_el = document.getElementById("body");
+    const title = title_el.value;
+    const post_body = body_el.value;
+    const date_posted = new Date();
+    return { title, post_body, date_posted };
+}
+
 async function sign_up(event) {
     event.preventDefault();
     const email = email_el.value;
@@ -87,20 +96,46 @@ async function comment(event) {
 
 async function add_post(event) {
     event.preventDefault();
-    const title_el = document.getElementById("title");
-    const body_el = document.getElementById("body");
-    const title = title_el.value;
-    const post_body = body_el.value;
-    const date_posted = new Date();
+    const new_post = get_post_values();
 
-    if (title && post_body) {
+    if (new_post.title && new_post.post_body) {
         const response = await fetch("/api/posts/new_post", {
             method: "POST",
-            body: JSON.stringify({ title, post_body, date_posted }),
+            body: JSON.stringify({
+                title: new_post.title,
+                post_body: new_post.post_body,
+                date_posted: new_post.date_posted
+            }),
             headers: { "Content-Type": "application/json" }
         });
 
         const response_body = await response.json();
+        if (response.ok) {
+            location.replace("/dashboard");
+        } else {
+            response_body.message ? alert(response_body.message) : alert(response.statusText);
+        }
+    }
+}
+
+async function update_post(event) {
+    event.preventDefault();
+    const new_post = get_post_values();
+
+    if (new_post.title && new_post.post_body) {
+        const fetch_route = "/api/posts/update/" + document.getElementById("post_editor").getAttribute("data-post-id");
+        const response = await fetch(fetch_route, {
+            method: "POST",
+            body: JSON.stringify({
+                title: new_post.title,
+                post_body: new_post.post_body,
+                date_posted: new_post.date_posted
+            }),
+            headers: { "Content-Type": "application/json" }
+        });
+
+        const response_body = await response.json();
+        console.log(response_body);
         if (response.ok) {
             location.replace("/dashboard");
         } else {
