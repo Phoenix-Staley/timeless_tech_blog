@@ -67,11 +67,12 @@ async function comment(event) {
     event.preventDefault();
     const comment_input_el = document.getElementById("comment");
     const comment = comment_input_el.value;
+    const date_posted = new Date();
 
     if (comment) {
         const response = await fetch("/api/comments/", {
             method: "POST",
-            body: JSON.stringify({ comment, post_id }),
+            body: JSON.stringify({ comment, date_posted, post_id }),
             headers: { "Content-Type": "application/json" }
         });
 
@@ -90,11 +91,12 @@ async function add_post(event) {
     const body_el = document.getElementById("body");
     const title = title_el.value;
     const post_body = body_el.value;
+    const date_posted = new Date();
 
     if (title && post_body) {
         const response = await fetch("/api/posts/new_post", {
             method: "POST",
-            body: JSON.stringify({ title, post_body }),
+            body: JSON.stringify({ title, post_body, date_posted }),
             headers: { "Content-Type": "application/json" }
         });
 
@@ -106,6 +108,4 @@ async function add_post(event) {
             response_body.message ? alert(response_body.message) : alert(response.statusText);
         }
     }
-
-    
 }
