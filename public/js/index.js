@@ -2,8 +2,9 @@ const email_el = document.getElementById("email_input");
 const username_el = document.getElementById("username_input");
 const password_el = document.getElementById("password_input");
 const post = document.getElementById("post");
+let post_id;
 if (post) {
-    const post_id = post.getAttribute("data-id");
+    post_id = post.getAttribute("data-id");
 }
 
 async function sign_up(event) {

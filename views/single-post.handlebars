@@ -1,5 +1,5 @@
 <div class="container is-half is-transparent">
-    <div class="card mb-3 is-transparent">
+    <div class="card mb-3 is-transparent" id="post" data-id="{{post.id}}">
         <header class="card-header has-background-black">
             <p class="card-header-title has-text-link-light">
                 {{post.title}}
@@ -16,8 +16,8 @@
         <div class="has-background-link-dark has-text-white px-5 pb-3 pt-3">
             <div class="column is-half">
                 <h3 class="mb-3">Comment:</h3>
-                <input class="input is-info is-rounded is-half has-background-grey has-text-weight-bold has-text-black" type="text" placeholder="I agree!">
-                <button id="comment" class="mt-4 button is-small has-background-info has-text-white is-info is-outlined">Comment</button>
+                <input class="input is-info is-rounded is-half has-background-grey has-text-weight-bold has-text-black" id="comment" type="text" placeholder="I agree!">
+                <button id="comment_btn" class="mt-4 button is-small has-background-info has-text-white is-info is-outlined" onclick="comment(event)">Comment</button>
             </div>
         </div>
         <h3 class="mt-5 mx-2 mb-1 box box-padding py-1 has-text-light has-background-link has-text-centered">Comments: </h3>
