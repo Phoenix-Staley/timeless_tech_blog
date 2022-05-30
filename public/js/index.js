@@ -76,10 +76,36 @@ async function comment(event) {
         });
 
         if (response.ok) {
-            document.location.reload();
+            location.reload();
         } else {
             const response_body = await response.json();
             response_body.message ? alert(response_body.message) : alert(response.statusText);
         }
     }
+}
+
+async function add_post(event) {
+    event.preventDefault();
+    const title_el = document.getElementById("title");
+    const body_el = document.getElementById("body");
+    const title = title_el.value;
+    const post_body = body_el.value;
+
+    if (title && post_body) {
+        const response = await fetch("/api/posts/new_post", {
+            method: "POST",
+            body: JSON.stringify({ title, post_body }),
+            headers: { "Content-Type": "application/json" }
+        });
+
+        const response_body = await response.json();
+        if (response.ok) {
+            const post_link = "/post/" + response_body.id;
+            location.replace(post_link);
+        } else {
+            response_body.message ? alert(response_body.message) : alert(response.statusText);
+        }
+    }
+
+    
 }
