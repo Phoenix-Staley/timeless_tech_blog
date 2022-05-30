@@ -1,11 +1,11 @@
 <div class="container is-half is-transparent">
     <div class="card mb-3 is-transparent" id="post" data-id="{{post.id}}">
         <header class="card-header has-background-black">
-            <p class="card-header-title has-text-link-light">
+            <p class="card-header-title has-text-light">
                 {{post.title}}
             </p>
-            <p class="has-text-info pr-3 pt-3">
-                From: {{post.user.username}}
+            <p class="has-text-success pr-3 pt-3">
+                Posted: {{post.date_posted}} || From: {{post.user.username}}
             </p>
         </header>
         <div class="card-content has-background-dark has-text-light">

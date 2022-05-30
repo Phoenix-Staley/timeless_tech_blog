@@ -2,31 +2,37 @@
     {
         "body": "Minim id velit voluptate eiusmod ea veniam pariatur deserunt consequat irure nulla laborum fugiat consectetur.",
         "post_id": 1,
+        "date_posted": "2022-01-17T04:33:12.000Z",
         "commenter_id": 2
     },
     {
         "body": "Minim id velit voluptate eiusmod ea veniam pariatur deserunt consequat irure nulla laborum fugiat consectetur.",
         "post_id": 2,
+        "date_posted": "2022-01-17T04:33:12.000Z",
         "commenter_id": 2
     },
     {
         "body": "Minim id velit voluptate eiusmod ea veniam pariatur deserunt consequat irure nulla laborum fugiat consectetur.",
         "post_id": 3,
+        "date_posted": "2022-01-17T04:33:12.000Z",
         "commenter_id": 2
     },
     {
         "body": "Minim id velit voluptate eiusmod ea veniam pariatur deserunt consequat irure nulla laborum fugiat consectetur.",
         "post_id": 2,
+        "date_posted": "2022-01-17T04:33:12.000Z",
         "commenter_id": 2
     },
     {
         "body": "Minim id velit voluptate eiusmod ea veniam pariatur deserunt consequat irure nulla laborum fugiat consectetur.",
         "post_id": 5,
+        "date_posted": "2022-01-17T04:33:12.000Z",
         "commenter_id": 2
     },
     {
         "body": "Minim id velit voluptate eiusmod ea veniam pariatur deserunt consequat irure nulla laborum fugiat consectetur.",
         "post_id": 1,
+        "date_posted": "2022-01-17T04:33:12.000Z",
         "commenter_id": 2
     }
 ]
