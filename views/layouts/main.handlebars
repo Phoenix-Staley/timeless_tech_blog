@@ -15,7 +15,7 @@
                 <a href="/" class="px-3">Home</a>
                 <a href="/dashboard" class="px-3">Dashboard</a>
                 {{#if logged_in}}
-                <a class="px-3">Log Out</a>
+                <a onclick="logout(event)" class="px-3">Log Out</a>
                 {{else}}
                 <a href="/login" class="px-3">Log In</a>
                 {{/if}}
