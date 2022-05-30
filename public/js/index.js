@@ -102,8 +102,7 @@ async function add_post(event) {
 
         const response_body = await response.json();
         if (response.ok) {
-            const post_link = "/post/" + response_body.id;
-            location.replace(post_link);
+            location.replace("/dashboard");
         } else {
             response_body.message ? alert(response_body.message) : alert(response.statusText);
         }
