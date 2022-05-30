@@ -14,8 +14,8 @@
             <div id="right-header">
                 <a href="/" class="px-4">Home</a>
                 <a href="/dashboard" class="px-4">Dashboard</a>
-                <a href="/new_post" class="px-4">New Post</a>
                 {{#if logged_in}}
+                <a href="/new_post" class="px-4">New Post</a>
                 <a onclick="logout(event)" class="px-4">Log Out</a>
                 {{else}}
                 <a href="/login" class="px-4">Login</a>
