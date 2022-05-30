@@ -1,5 +1,5 @@
-<div class="column m-auto is-half has-background-dark box">
-    <h3 class="has-text-centered title has-text-white">New Post:</h3>
+<div class="column m-auto is-half has-background-dark box" id="post_editor" {{#if post}}data-post-id="{{post.id}}"{{/if}}>
+    <h3 class="has-text-centered title has-text-white">{{#if post}}Update{{else}}New{{/if}} Post:</h3>
     <div class="field is-horizontal">
         <div class="field-label is-normal">
             <label class="label has-text-white">Title</label>
@@ -7,7 +7,9 @@
         <div class="field-body">
             <div class="field">
                 <div class="control">
-                    <input class="input" type="text" id="title" placeholder="Where will Netflix be in 10 years?">
+                    <input class="input" type="text" id="title"
+                    placeholder="Where will Netflix be in 10 years?"
+                    {{#if post}}value="{{post.title}}"{{/if}}>
                 </div>
             </div>
         </div>
@@ -20,7 +22,9 @@
         <div class="field-body">
             <div class="field">
                 <div class="control">
-                    <textarea class="textarea" id="body" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."></textarea>
+                    <textarea class="textarea" id="body"
+                    placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    >{{#if post}}{{post.body}}{{/if}}</textarea>
                 </div>
             </div>
         </div>
@@ -33,9 +37,15 @@
         <div class="field-body">
             <div class="field">
                 <div class="control">
-                    <button class="button is-primary" onclick="add_post(event)">
-                    Post
+                    {{#if post}}
+                    <button class="button is-primary" onclick="update_post(event)">
+                        Update
                     </button>
+                    {{else}}
+                    <button class="button is-primary" onclick="add_post(event)">
+                        Post
+                    </button>
+                    {{/if}}
                 </div>
             </div>
         </div>

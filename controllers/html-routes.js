@@ -17,7 +17,12 @@ router.get("/dashboard", with_auth, async (req, res) => {
         include: User,
         where: { user_id: req.session.user_id }
     });
-    render_posts(post_data, req, res);
+    let posts = post_data.map(post => post.get({ plain: true }));
+    posts = posts.map(post => {
+        post.is_current_user = true;
+        return post;
+    });
+    res.render("home_dashboard", { posts: posts, logged_in: req.session.logged_in });
 });
 
 router.get("/user/:id", with_auth, async (req, res) => {
