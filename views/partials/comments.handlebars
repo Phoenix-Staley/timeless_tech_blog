@@ -1,13 +1,15 @@
 {{#each post.comments as |comment|}}
 <div class="card mx-3 my-1 mb-3">
-    <header class="card-header has-background-black">
-        <a href="/user/{{post.user.id}}">
+    <header class="card-header has-background-black is-flex is-justify-content-space-between">
+        <a href="/user/{{comment.user.id}}">
             <p class="card-header-title has-text-light">
                 {{comment.user.username}}
             </p>
         </a>
         <p class="has-text-success pr-3 pt-3">
-            {{format_date comment.date_posted}}
+            <span class="has-text-white">Last updated: {{format_date comment.updatedAt}}</span>
+            <span class="has-text-white">||</span>
+            <span class="has-text-success">Posted: {{format_date comment.date_posted}}</span>
         </p>
     </header>
     <div class="card-content has-background-dark has-text-light p-3">
