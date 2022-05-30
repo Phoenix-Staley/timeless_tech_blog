@@ -1,7 +1,7 @@
 const router = require('express').Router();
 
-const single_post_routes = require('./single-post-routes');
+const session_routes = require("./session-routes");
 
-router.use('/post', single_post_routes);
+router.use("/users", session_routes);
 
 module.exports = router;

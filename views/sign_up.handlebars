@@ -6,7 +6,7 @@
         <div class="field">
           <label for="" class="label has-text-white">Username</label>
           <div class="control has-icons-left">
-            <input type="text" placeholder="BobSmith123" class="input" required>
+            <input type="text" placeholder="BobSmith123" class="input" id="username_input" required>
             <span class="icon is-small is-left">
               <i class="fa fa-lock"></i>
             </span>
@@ -14,7 +14,7 @@
         </div>
         {{> password}}
         <div class="field">
-          <a><button class="button is-success">
+          <a><button class="button is-success" onclick="sign_up(event)">
             Sign Up
           </button></a>
         </div>
