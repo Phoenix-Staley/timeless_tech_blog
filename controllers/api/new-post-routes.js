@@ -16,6 +16,7 @@ router.post("/new_post", with_auth, async (req, res) => {
 
         res.status(201).json(new_post);
     } catch (err) {
+        console.log(err);
         res.status(400).json(err);
     }
 });
