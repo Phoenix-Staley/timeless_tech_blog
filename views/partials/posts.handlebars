@@ -4,8 +4,10 @@
         <p class="card-header-title has-text-white">
             {{post.title}}
         </p>
-        <p class="has-text-success pr-3 pt-3">
-            Posted: {{format_date post.date_posted}} || From: {{post.user.username}}
+        <p class="pr-3 pt-3">
+            <span class="has-text-success">{{format_date post.date_posted}}</span>
+            <span class="has-text-white">||</span>
+            <a href="/user/{{post.user.id}}"><span class="has-text-info">{{post.user.username}}</span></a>
         </p>
     </header>
     <div class="card-content has-background-dark has-text-white">
