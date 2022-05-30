@@ -38,4 +38,8 @@ router.get("/sign_up", async (req, res) => {
     res.render("sign_up");
 });
 
+router.get("/new_post", async (req, res) => {
+    res.render("new_post");
+});
+
 module.exports = router;
