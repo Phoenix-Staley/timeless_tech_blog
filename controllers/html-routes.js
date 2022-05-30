@@ -54,7 +54,24 @@ router.get("/sign_up", async (req, res) => {
 });
 
 router.get("/new_post", async (req, res) => {
-    res.render("new_post");
+    res.render("add_update_post");
+});
+
+router.get("/update_post/:id", with_auth, async (req, res) => {
+    try {
+        const post_data = await Post.findByPk(req.params.id, {
+            include: [{ model: User }]
+        });
+        const post = post_data.get({ plain: true });
+        if (req.session.user_id !== post.user_id) {
+            res.status(401).json({ message: "This message was posted by a different account." });
+            return;
+        }
+        res.render("add_update_post", { post });
+    } catch (err) {
+        console.log(err);
+        res.status(400).json(err);
+    }
 });
 
 module.exports = router;
