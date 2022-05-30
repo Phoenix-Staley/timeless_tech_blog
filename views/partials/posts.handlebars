@@ -1,0 +1,28 @@
+{{#each posts as |post|}}
+<div class="card mb-3">
+    <header class="card-header has-background-black">
+        <a href="/post/{{post.id}}"><p class="card-header-title has-text-white">
+            {{post.title}}
+        </p></a>
+        
+        <p class="pr-3 pt-3">
+            <span class="has-text-success">{{format_date post.date_posted}}</span>
+            <span class="has-text-white">||</span>
+            <a href="/user/{{post.user.id}}"><span class="has-text-info">{{post.user.username}}</span></a>
+        </p>
+    </header>
+    <div class="card-content has-background-dark has-text-white">
+        <div class="content">
+            {{post.body}}
+        </div>
+        <a href="/post/{{post.id}}"><button class="button has-text-info has-background-black is-black is-outlined">
+            View Comments
+        </button></a>
+        {{#if is_current_user}}
+        <a href="/update_post/{{post.id}}"><button class="button has-text-info has-background-black is-black is-outlined">
+            Edit Post
+        </button></a>
+        {{/if}}
+    </div>
+</div>
+{{/each}}

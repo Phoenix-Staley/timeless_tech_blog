@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="columns is-centered">
+    <div class="column is-5-tablet is-4-desktop is-3-widescreen">
+      <form action="" class="box has-background-dark has-text-white">
+        {{> email}}
+        <div class="field">
+          <label for="" class="label has-text-white">Username</label>
+          <div class="control has-icons-left">
+            <input type="text" placeholder="BobSmith123" class="input" id="username_input" required>
+            <span class="icon is-small is-left">
+              <i class="fa fa-lock"></i>
+            </span>
+          </div>
+        </div>
+        {{> password}}
+        <div class="field">
+          <a><button class="button is-success" onclick="sign_up(event)">
+            Sign Up
+          </button></a>
+        </div>
+      </form>
+      <div class="is-flex is-justify-content-center">
+        <a href="/login/" class=""><button class="button is-success">
+          Login Instead
+        </button></a>
+      </div>
+    </div>
+  </div>
+</div>
