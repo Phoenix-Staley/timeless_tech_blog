@@ -8,7 +8,7 @@ function render_posts(post_data, req, res) {
 }
 
 router.get("/", async (req, res) => {
-    const post_data = await Post.findAll({ include: User});
+    const post_data = await Post.findAll({ include: User, order: [["date_posted", 'DESC']] });
     render_posts(post_data, req, res);
 });
 
@@ -29,13 +29,17 @@ router.get("/user/:id", with_auth, async (req, res) => {
 });
 
 router.get("/post/:id", with_auth, async (req, res) => {
-    const post_data = await Post.findByPk(req.params.id, { include: [{
-            model: User
-        },
-        {
-            model: Comment,
-            include: User
-        }]
+    const post_data = await Post.findByPk(req.params.id, {
+        include: [
+            {
+                model: User
+            },
+            {
+                model: Comment,
+                include: User
+            }
+        ],
+        order: [["date_posted", 'DESC']]
     });
     const post = post_data.get({ plain: true });
     res.render("single-post", { post: post, logged_in: req.session.logged_in });
