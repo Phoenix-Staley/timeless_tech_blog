@@ -1,3 +1,7 @@
+{{#if posts.0.is_current_user}}
+<h3 class="is-size-1 has-text-black has-text-centered m-0">Your Dashboard</h3>
+<hr style="background-color: black;" class="mb-5 py-1 mt-0">
+{{/if}}
 <div class="container is-half">
     {{#if posts}}
     {{> posts}}

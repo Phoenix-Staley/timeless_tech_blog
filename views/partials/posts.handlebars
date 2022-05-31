@@ -1,12 +1,14 @@
 {{#each posts as |post|}}
 <div class="card mb-3">
-    <header class="card-header has-background-black">
+    <header class="card-header has-background-black is-flex is-justify-content-space-between">
         <a href="/post/{{post.id}}"><p class="card-header-title has-text-white">
             {{post.title}}
         </p></a>
         
         <p class="pr-3 pt-3">
-            <span class="has-text-success">{{format_date post.date_posted}}</span>
+            <span class="has-text-white">Last updated: {{format_date post.updatedAt}}</span>
+            <span class="has-text-white">||</span>
+            <span class="has-text-success">Posted: {{format_date post.date_posted}}</span>
             <span class="has-text-white">||</span>
             <a href="/user/{{post.user.id}}"><span class="has-text-info">{{post.user.username}}</span></a>
         </p>
