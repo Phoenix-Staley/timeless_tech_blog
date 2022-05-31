@@ -59,7 +59,7 @@ router.get("/sign_up", async (req, res) => {
 });
 
 router.get("/new_post", async (req, res) => {
-    res.render("add_update_post");
+    res.render("add_update_post", { logged_in: req.session.logged_in });
 });
 
 router.get("/update_post/:id", with_auth, async (req, res) => {
@@ -72,7 +72,7 @@ router.get("/update_post/:id", with_auth, async (req, res) => {
             res.status(401).json({ message: "This message was posted by a different account." });
             return;
         }
-        res.render("add_update_post", { post });
+        res.render("add_update_post", { post: post, logged_in: req.session.logged_in });
     } catch (err) {
         console.log(err);
         res.status(400).json(err);
