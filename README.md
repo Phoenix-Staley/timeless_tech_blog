@@ -36,4 +36,4 @@ This website uses various technologies to render webpages dynamically, including
 ![A Post With a Comment Section](./assets/comments.png)
 
 ## Contribute
-If you wish to contribute or have any questions, please don't hesitate to [email me](mailto:PhoenixStaley_Developer@outlook.com)
+If you wish to contribute or have any questions, please don't hesitate to [email me](mailto:PhoenixStaley_Developer@outlook.com)!
