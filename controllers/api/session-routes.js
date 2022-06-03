@@ -51,6 +51,12 @@ router.post("/sign_up", async (req, res) => {
     try {
         const taken_email = await User.findOne({ where: { email: req.body.email } });
         const taken_username = await User.findOne({ where: { username: req.body.username } });
+
+        if (taken_email || taken_username) {
+            res.status(400).json({ message: "This username or email has been taken." });
+            return;
+        }
+
         const user_data = await User.create(req.body);
     
         req.session.save(() => {
