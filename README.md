@@ -7,8 +7,6 @@
 
 - [Description](#Description)
 
-- [Description](#Description)
-
 - [Usage with Examples](#Usage)
 
 - [Contribute](#Contribute)
